@@ -1,0 +1,35 @@
+<form action="{{ url_for('search') }}" method="post">
+   <input type="text" name="idToSearch">
+   <input type="submit">
+</form>
+
+<!doctype html>
+<html>
+   <body>
+   
+      <table border = 1>
+         <thead>
+            <td>ID</td>
+            <td>City</td>
+            <td>Temperature</td>
+            <td>Pressure</td>
+            <td>Humidity</td>
+            <td>Description</td>
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row["id"]}}</td>
+               <td>{{row["city_name"]}}</td>
+               <td> {{ row["temperature"]}}</td>
+               <td>{{row["pressure"]}}</td>
+               <td>{{row["humidity"]}}</td>	
+               <td>{{row["description"]}}</td>	
+            </tr>
+         {% endfor %}
+      </table>
+      
+      <a href = "/">Go back to home page</a>
+      
+   </body>
+</html>
