@@ -85,4 +85,4 @@ while True :
 	cur.execute('SELECT COUNT(id) FROM weather_reports')
 	count = cur.fetchone()[0] + 1
 	get_weather(count)
-	time.sleep(5)
+	time.sleep(30)
