@@ -1,4 +1,4 @@
-import requests, json, os, sqlite3, flask
+import sqlite3, flask
 
 from flask import Flask, request, render_template
 
