@@ -22,8 +22,7 @@ def search():
     print("idToSearch = ", idToSearch)
 
     rows = cur.fetchall()
-
-    print(rows)
+    con.close()
 
     return render_template("search.html", rows = rows)
 
@@ -39,6 +38,8 @@ def list():
     cur.execute('SELECT * from weather_reports')
 
     rows = cur.fetchall()
+
+    con.close()
     return render_template("list.html",rows = rows)
 
 
